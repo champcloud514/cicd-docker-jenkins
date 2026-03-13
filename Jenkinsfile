@@ -9,7 +9,7 @@ pipeline {
 
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/champcloud514/jenkins-docker-cicd.git'
+                git 'https://github.com/champcloud514/cicd-docker-jenkins.git'
             }
         }
 
