@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DockerStore | Modern E-Commerce</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <h1 class="logo">Docker<span>Store</span></h1>
+            <div class="cart-trigger" onclick="toggleCart()">
+                <span class="material-icons">shopping_cart</span>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <main id="app">
+        <section class="hero">
+            <h2>Premium Dev Swag</h2>
+            <p>Shipped directly from your favorite container.</p>
+        </section>
+        <div id="product-grid" class="grid"></div>
+    </main>
+
+    <div id="cart-drawer" class="drawer">
+        <div class="drawer-header">
+            <h3>Your Cart</h3>
+            <span class="material-icons close" onclick="toggleCart()">close</span>
+        </div>
+        <div id="cart-items"></div>
+        <div class="drawer-footer">
+            <div class="total">Total: $<span id="cart-total">0.00</span></div>
+            <button class="checkout-btn" onclick="checkout()">Checkout Now</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
