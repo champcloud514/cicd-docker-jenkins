@@ -3,19 +3,12 @@ pipeline {
 
     stages {
 
-        stage('Clone Repository') {
-            steps {
-                git 'https://github.com/champcloud514/cicd-docker-jenkins.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 dir('flask-cicd-project') {
-                     sh 'docker build -t flask-app .'
+                    sh 'docker build -t flask-app .'
+                }
             }
-          }
-
         }
 
         stage('Stop Old Container') {
@@ -30,5 +23,6 @@ pipeline {
                 sh 'docker run -d -p 5000:5000 --name flask-container flask-app'
             }
         }
+
     }
 }
